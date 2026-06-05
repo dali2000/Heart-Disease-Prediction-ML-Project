@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+beautifulsoup4
+requests
+mlflow
+xgboost
+lightgbm
+fastapi
+uvicorn
+pydantic
+joblib
+imbalanced-learn
+python-multipart
