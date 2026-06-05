@@ -6,18 +6,6 @@ env/
 .venv/
 *.egg-info/
 
-# MLflow
-mlruns/
-mlartifacts/
-mlflow.db
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Data
-data/*.png
-data/*.pkl
-
 # Node
 node_modules/
 frontend/dist/
