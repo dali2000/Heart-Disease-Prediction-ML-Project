@@ -33,93 +33,93 @@ const HeartForm = ({ onPredict }) => {
 
     return (
         <div className="glass-card">
-            <h2 className="section-title"><Activity size={24} color="#6366f1" /> Patient Data</h2>
+            <h2 className="section-title"><Activity size={24} color="#6366f1" /> Données du Patient</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-grid">
                     <div className="form-group">
-                        <label>Age (years)</label>
+                        <label>Âge (en années)</label>
                         <input type="number" name="age" min={20} max={100}
                                value={formData.age} onChange={handleChange} required />
                     </div>
 
                     <div className="form-group">
-                        <label>Sex</label>
+                        <label>Sexe</label>
                         <select name="sex" value={formData.sex} onChange={handleChange}>
-                            <option value={1}>Male (1)</option>
-                            <option value={0}>Female (0)</option>
+                            <option value={1}>Homme</option>
+                            <option value={0}>Femme</option>
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label>Chest Pain Type (cp)</label>
+                        <label>Type de douleur thoracique (cp)</label>
                         <select name="cp" value={formData.cp} onChange={handleChange}>
-                            <option value={0}>0 – Typical Angina</option>
-                            <option value={1}>1 – Atypical Angina</option>
-                            <option value={2}>2 – Non-Anginal Pain</option>
-                            <option value={3}>3 – Asymptomatic</option>
+                            <option value={0}>0 – Angine typique (douleur classique à l'effort)</option>
+                            <option value={1}>1 – Angine atypique (douleur inhabituelle)</option>
+                            <option value={2}>2 – Douleur non angineuse (non liée au cœur)</option>
+                            <option value={3}>3 – Asymptomatique (aucune douleur)</option>
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label>Resting BP (trestbps, mm Hg)</label>
+                        <label>Pression artérielle au repos (mm Hg)</label>
                         <input type="number" name="trestbps" min={80} max={200}
                                value={formData.trestbps} onChange={handleChange} required />
                     </div>
 
                     <div className="form-group">
-                        <label>Cholesterol (chol, mg/dl)</label>
+                        <label>Cholestérol sérique (mg/dl)</label>
                         <input type="number" name="chol" min={100} max={600}
                                value={formData.chol} onChange={handleChange} required />
                     </div>
 
                     <div className="form-group">
-                        <label>Fasting Blood Sugar {'>'} 120 (fbs)</label>
+                        <label>Glycémie à jeun {'>'} 120 mg/dl (fbs)</label>
                         <select name="fbs" value={formData.fbs} onChange={handleChange}>
-                            <option value={0}>No (0)</option>
-                            <option value={1}>Yes (1)</option>
+                            <option value={0}>Non</option>
+                            <option value={1}>Oui</option>
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label>Resting ECG (restecg)</label>
+                        <label>Électrocardiogramme au repos (restecg)</label>
                         <select name="restecg" value={formData.restecg} onChange={handleChange}>
                             <option value={0}>0 – Normal</option>
-                            <option value={1}>1 – ST-T Abnormality</option>
-                            <option value={2}>2 – LV Hypertrophy</option>
+                            <option value={1}>1 – Anomalie ST-T (onde T inversée ou segment ST)</option>
+                            <option value={2}>2 – Hypertrophie ventriculaire gauche (cœur élargi)</option>
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label>Max Heart Rate (thalach)</label>
+                        <label>Fréquence cardiaque maximale atteinte (bpm)</label>
                         <input type="number" name="thalach" min={60} max={220}
                                value={formData.thalach} onChange={handleChange} required />
                     </div>
 
                     <div className="form-group">
-                        <label>Exercise Angina (exang)</label>
+                        <label>Angine induite par l'effort (exang)</label>
                         <select name="exang" value={formData.exang} onChange={handleChange}>
-                            <option value={0}>No (0)</option>
-                            <option value={1}>Yes (1)</option>
+                            <option value={0}>Non</option>
+                            <option value={1}>Oui</option>
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label>ST Depression (oldpeak)</label>
+                        <label>Dépression du segment ST à l'effort (oldpeak)</label>
                         <input type="number" name="oldpeak" min={0} max={7} step={0.1}
                                value={formData.oldpeak} onChange={handleChange} required />
                     </div>
 
                     <div className="form-group">
-                        <label>ST Slope (slope)</label>
+                        <label>Pente du segment ST (slope)</label>
                         <select name="slope" value={formData.slope} onChange={handleChange}>
-                            <option value={0}>0 – Upsloping</option>
-                            <option value={1}>1 – Flat</option>
-                            <option value={2}>2 – Downsloping</option>
+                            <option value={0}>0 – Ascendante (signe favorable)</option>
+                            <option value={1}>1 – Plate (signe neutre)</option>
+                            <option value={2}>2 – Descendante (signe défavorable)</option>
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label>Major Vessels (ca, 0-3)</label>
+                        <label>Nombre de vaisseaux coronaires visibles (ca, 0–3)</label>
                         <select name="ca" value={formData.ca} onChange={handleChange}>
                             <option value={0}>0</option>
                             <option value={1}>1</option>
@@ -129,17 +129,17 @@ const HeartForm = ({ onPredict }) => {
                     </div>
 
                     <div className="form-group">
-                        <label>Thalassemia (thal)</label>
+                        <label>Thalassémie – type de flux sanguin (thal)</label>
                         <select name="thal" value={formData.thal} onChange={handleChange}>
                             <option value={0}>0 – Normal</option>
-                            <option value={1}>1 – Fixed Defect</option>
-                            <option value={2}>2 – Reversable Defect</option>
-                            <option value={3}>3 – Other</option>
+                            <option value={1}>1 – Défaut fixe (zone sans flux permanent)</option>
+                            <option value={2}>2 – Défaut réversible (zone sans flux à l'effort)</option>
+                            <option value={3}>3 – Autre</option>
                         </select>
                     </div>
 
                     <button type="submit" className="btn-primary">
-                        <Send size={18} /> Run Prediction
+                        <Send size={18} /> Lancer la Prédiction
                     </button>
                 </div>
             </form>
