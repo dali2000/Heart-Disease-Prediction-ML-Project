@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/medal/Desktop/Heart-Disease-Prediction/mlruns/1/models/m-ab2af4a4a1124f70aad8bc05e44fb67f/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-ab2af4a4a1124f70aad8bc05e44fb67f
+model_size_bytes: 735615
+model_uuid: m-ab2af4a4a1124f70aad8bc05e44fb67f
+prompts: null
+run_id: c75abb170cd94728b0140407f998614e
+utc_time_created: '2026-06-06 13:03:01.069587'
